@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center; /* tengah horizontal */
+    align-items: center;     /* tengah vertikal */
+    background: #f4f6f8;
+}
+
+.container {
+    width: 500%;        /* 👉 ubah ukuran di sini */
+    max-width: 100%;      /* responsive */
+    padding: 30px;
+    text-align: center;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.container img {
+    max-width: 100%;   /* TIDAK boleh lebih lebar dari container */
+    height: auto;      /* jaga rasio gambar */
+    display: block;
+    margin: 20px auto 0;
+    border-radius: 10px;
+}
+
+.carousel {
+    width: 100%;
+    height: 250px;          /* kamu boleh ubah */
+    overflow: hidden;       /* ⛔ STOP keluar container */
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+.carousel-track {
+    display: flex;
+    height: 100%;
+    transform: translateX(0);
+}
+
+.carousel-track img {
+    height: 100%;
+    width: auto;
+    margin-right: 12px;
+    border-radius: 10px;
+}
+
+
+#title-header {
+    font-size: 20px;
+    color: blue;     /* 👉 ubah ukuran teks */
+}
+
+#title-footer{
+    font-size: 16px;
+    color: red;    /* 👉 ubah ukuran teks */
+}
+
+button {
+    position: absolute;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 12px;
+    background: #ff5722;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    display: none;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    background: rgba(0, 0, 0, 0.85);
+    color: white;
+
+    text-align: center;
+    padding: 10px 0;
+
+    font-size: 14px;
+    letter-spacing: 0.5px;
+
+    z-index: 999; /* selalu di atas */
+}
+
+.footer {
+    animation: fadeUp 1s ease;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
